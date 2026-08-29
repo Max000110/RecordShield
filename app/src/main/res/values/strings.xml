@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RecordShield</string>
+    <string name="accessibility_service_label">RecordShield</string>
+    <string name="accessibility_service_description">RecordShield monitors the Vivo in-call UI to prevent accidental touches on the Record button. It does NOT record calls, read contacts, or access your data.</string>
+    <string name="accessibility_service_summary">Protects call recordings from accidental touches</string>
+</resources>

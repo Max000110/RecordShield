@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "com.vivorecordshield.app-debug-40:/layout_card_section.xml.flat",
+        "source": "com.vivorecordshield.app-main-42:/layout/card_section.xml"
+    },
+    {
+        "merged": "com.vivorecordshield.app-debug-40:/drawable_ic_shield.xml.flat",
+        "source": "com.vivorecordshield.app-main-42:/drawable/ic_shield.xml"
+    },
+    {
+        "merged": "com.vivorecordshield.app-debug-40:/layout_activity_diagnostics.xml.flat",
+        "source": "com.vivorecordshield.app-main-42:/layout/activity_diagnostics.xml"
+    },
+    {
+        "merged": "com.vivorecordshield.app-debug-40:/layout_activity_main.xml.flat",
+        "source": "com.vivorecordshield.app-main-42:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.vivorecordshield.app-debug-40:/mipmap-hdpi_ic_launcher.xml.flat",
+        "source": "com.vivorecordshield.app-main-42:/mipmap-hdpi/ic_launcher.xml"
+    },
+    {
+        "merged": "com.vivorecordshield.app-debug-40:/xml_accessibility_service_config.xml.flat",
+        "source": "com.vivorecordshield.app-main-42:/xml/accessibility_service_config.xml"
+    }
+]

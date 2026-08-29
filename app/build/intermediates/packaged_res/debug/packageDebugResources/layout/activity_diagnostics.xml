@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    tools:context=".ui.DiagnosticsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OEM Survival Assistant"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvAndroidVersion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Android OS: —"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary" />
+
+        <TextView
+            android:id="@+id/tvVivoVersion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Build ID: —"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary" />
+
+        <TextView
+            android:id="@+id/tvAppVersion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Version: 2.1.1"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="16dp" />
+
+        <!-- SYSTEM DIAGNOSTICS CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/card_bg"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TELEPHONY &amp; UI DETECTION"
+                    android:textSize="11sp"
+                    android:textColor="@color/text_secondary"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView android:id="@+id/tvIncallPackage" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="InCallUI Package: com.android.incallui" android:textColor="@color/text_primary" android:textSize="13sp" android:fontFamily="monospace"/>
+                <TextView android:id="@+id/tvRecordResId" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Target ResID: com.android.incallui:id/record_or_contacts" android:textColor="@color/text_primary" android:textSize="12sp" android:fontFamily="monospace"/>
+                <TextView android:id="@+id/tvRecordNodeDetected" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Record Node Detected: NO" android:textColor="@color/text_secondary" android:textSize="13sp"/>
+                <TextView android:id="@+id/tvRecordNodeBounds" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Bounds: —" android:textColor="@color/text_secondary" android:textSize="12sp" android:fontFamily="monospace" android:layout_marginBottom="12dp"/>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider" android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SERVICE &amp; PERMISSION DIAGNOSTICS"
+                    android:textSize="11sp"
+                    android:textColor="@color/text_secondary"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView android:id="@+id/tvOverlayStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Overlay: INACTIVE" android:textColor="@color/text_primary" android:textSize="13sp"/>
+                <TextView android:id="@+id/tvAccessibilityStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Accessibility: DISABLED" android:textColor="@color/text_primary" android:textSize="13sp"/>
+                <TextView android:id="@+id/tvOverlayPermission" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Overlay Permission: DENIED" android:textColor="@color/text_primary" android:textSize="13sp"/>
+                <TextView android:id="@+id/tvBatteryOptStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Battery Optimization: NOT EXEMPT" android:textColor="@color/text_primary" android:textSize="13sp"/>
+                <TextView android:id="@+id/tvFgServiceStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Foreground Service: STOPPED" android:textColor="@color/text_primary" android:textSize="13sp"/>
+                <TextView android:id="@+id/tvWatchdogStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Watchdog: UNHEALTHY" android:textColor="@color/text_primary" android:textSize="13sp" android:layout_marginBottom="12dp"/>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider" android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TELEMETRY COUNTERS"
+                    android:textSize="11sp"
+                    android:textColor="@color/text_secondary"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView android:id="@+id/tvLastHeartbeat" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Last Heartbeat: —" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+                <TextView android:id="@+id/tvLastRecovery" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Last Recovery: —" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+                <TextView android:id="@+id/tvFailureCount" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Failure Counter: 0 / 5" android:textColor="@color/text_primary" android:textSize="13sp"/>
+                <TextView android:id="@+id/tvRecoveryCount" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Recovery Count: 0" android:textColor="@color/text_primary" android:textSize="13sp"/>
+                <TextView android:id="@+id/tvBootCount" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Boot Count: 0" android:textColor="@color/text_primary" android:textSize="13sp" android:layout_marginBottom="16dp"/>
+
+                <!-- ACTION BUTTONS -->
+                <Button android:id="@+id/btnFixBatteryOpt" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Request Battery Exemption" android:backgroundTint="@color/accent_orange" android:layout_marginBottom="8dp"/>
+                <Button android:id="@+id/btnFixAutoStart" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Configure Vivo Auto-Start" android:backgroundTint="@color/accent_blue" android:layout_marginBottom="8dp"/>
+                <Button android:id="@+id/btnFixHighPower" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Configure High Power Usage" android:backgroundTint="@color/accent_blue" android:layout_marginBottom="8dp"/>
+                <Button android:id="@+id/btnOpenAppDetails" style="?attr/materialButtonOutlinedStyle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Open App Details Settings" android:layout_marginBottom="8dp"/>
+                <Button android:id="@+id/btnRefreshDiagnostics" style="?attr/materialButtonOutlinedStyle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Refresh Diagnostics"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

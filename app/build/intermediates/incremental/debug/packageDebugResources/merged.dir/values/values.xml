@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent_blue">#1F6FEB</color>
+    <color name="accent_orange">#DB6D28</color>
+    <color name="bg_dark">#0D1117</color>
+    <color name="black">#000000</color>
+    <color name="card_bg">#161B22</color>
+    <color name="card_bg_elevated">#1F2937</color>
+    <color name="card_warning_bg">#2D1B00</color>
+    <color name="divider">#21262D</color>
+    <color name="log_bg">#0A0C0F</color>
+    <color name="log_text">#7EE787</color>
+    <color name="purple_200">#1F6FEB</color>
+    <color name="purple_500">#1F6FEB</color>
+    <color name="purple_700">#1158C7</color>
+    <color name="status_error">#F85149</color>
+    <color name="status_idle">#7D8590</color>
+    <color name="status_ok">#3FB950</color>
+    <color name="teal_200">#3FB950</color>
+    <color name="teal_700">#2EA043</color>
+    <color name="text_primary">#E6EDF3</color>
+    <color name="text_secondary">#7D8590</color>
+    <color name="text_warning">#D29922</color>
+    <color name="white">#FFFFFF</color>
+    <string name="accessibility_service_description">RecordShield monitors the Vivo in-call UI to prevent accidental touches on the Record button. It does NOT record calls, read contacts, or access your data.</string>
+    <string name="accessibility_service_label">RecordShield</string>
+    <string name="accessibility_service_summary">Protects call recordings from accidental touches</string>
+    <string name="app_name">RecordShield</string>
+    <style name="Theme.RecordShield" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/accent_blue</item>
+        <item name="colorPrimaryVariant">@color/accent_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor">@color/bg_dark</item>
+        <item name="android:navigationBarColor">@color/bg_dark</item>
+        <item name="android:windowBackground">@color/bg_dark</item>
+    </style>
+</resources>

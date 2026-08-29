@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Accessibility Service configuration for RecordShield.
+
+    - packageNames: scope to com.android.incallui ONLY
+    - accessibilityEventTypes: window state change + content change (to re-detect after UI rebuild)
+    - accessibilityFeedbackType: GENERIC (we do not speak or vibrate)
+    - notificationTimeout: 100ms debounce
+    - canRetrieveWindowContent: required to traverse the View tree and read node bounds
+-->
+<accessibility-service
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeWindowStateChanged|typeWindowContentChanged"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagReportViewIds|flagRequestEnhancedWebAccessibility"
+    android:canRetrieveWindowContent="true"
+    android:description="@string/accessibility_service_description"
+    android:notificationTimeout="100"
+    android:packageNames="com.android.incallui"
+    android:settingsActivity=".ui.MainActivity"
+    android:summary="@string/accessibility_service_summary" />
