@@ -45,21 +45,21 @@ Accidental ear, cheek, or proximity touches frequently hit this button, **uninte
 
 ```mermaid
 flowchart TD
-    InCallUI[📞 Active Vivo Call: com.android.incallui] --> AccService[🛡️ RecordShieldAccessibilityService]
-    AccService --> DFS[🔍 Find Node: record_or_contacts 0x7f0a03f1]
-    DFS --> Extract[📐 Extract Exact Bounds [L,T][R,B]]
-    Extract --> OverlayMgr[🎨 TouchShieldManager]
-    OverlayMgr --> OverlayWindow[🛑 Overlay over Record Button ONLY]
+    InCallUI["📞 Active Vivo Call: com.android.incallui"] --> AccService["🛡️ RecordShieldAccessibilityService"]
+    AccService --> DFS["🔍 Find Node: record_or_contacts 0x7f0a03f1"]
+    DFS --> Extract["📐 Extract Exact Screen Bounds"]
+    Extract --> OverlayMgr["🎨 TouchShieldManager"]
+    OverlayMgr --> OverlayWindow["🛑 Overlay over Record Button ONLY"]
 
-    OEMKill[❌ Funtouch OS Kill] --> L1[Layer 1: FGS START_STICKY]
-    OEMKill --> L2[Layer 2: EmergencyRestartReceiver 3s Alarm]
-    OEMKill --> L3[Layer 3: ShieldWatchdog WorkManager]
-    OEMKill --> L4[Layer 4: SentinelAlarmWatchdog 5min Alarm]
-    OEMKill --> L5[Layer 5: BootReceiver Direct Boot]
+    OEMKill["❌ Funtouch OS Kill"] --> L1["Layer 1: FGS START_STICKY"]
+    OEMKill --> L2["Layer 2: EmergencyRestartReceiver 3s Alarm"]
+    OEMKill --> L3["Layer 3: ShieldWatchdog WorkManager"]
+    OEMKill --> L4["Layer 4: SentinelAlarmWatchdog 5min Alarm"]
+    OEMKill --> L5["Layer 5: BootReceiver Direct Boot"]
 
-    L1 --> ThresholdCheck{Consecutive Kills >= 5?}
-    ThresholdCheck -- Yes --> FullRecovery[🔥 FULL RECOVERY MODE: Flush & Re-Register Watchdogs]
-    ThresholdCheck -- No --> NormalRestart[🔄 Restart Shield Service]
+    L1 --> ThresholdCheck{"Consecutive Kills >= 5?"}
+    ThresholdCheck -- Yes --> FullRecovery["🔥 FULL RECOVERY MODE: Flush & Re-Register Watchdogs"]
+    ThresholdCheck -- No --> NormalRestart["🔄 Restart Shield Service"]
 ```
 
 ---
@@ -82,7 +82,7 @@ flowchart TD
 ## 📥 Download & Installation
 
 ### Option 1: Direct APK Download 📦
-Download the latest APK release directly from GitHub Releases:
+Download the latest APK release directly from GitHub Releases:  
 👉 **[Download RecordShield v2.1.1 APK](https://github.com/Max000110/RecordShield/releases/latest)**
 
 ### Option 2: Build & Deploy via ADB 🛠️
